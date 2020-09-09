@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 data</title>
+    <link rel="icon" href="Images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    #logo{
+        font-family: 'Lobster', cursive;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <h3 id="logo">Aayam555</h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="element.html">Elements</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="App.html">Apps</a>
+                </li>
+            </ul>
+            <a href="https://www.youtube.com/channel/UCxOSFCyWvZ69g0EWKkizy2g?view_as=subscriber" class="btn btn-light"
+                role="button" aria-pressed="true" type="summit" target="_blank">SUBSCRIBE</a>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-white bg-primary my-3 mx-3">
+        <h1 class="display-4 text-center">Covid-19 Live Data</h1>
+        <hr class="my-4">
+        <table class="table table-bordered table-hover table-light text-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Total Confirmed</th>
+                    <th scope="col">Total Recovered</th>
+                    <th scope="col">Total Deaths</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h5 id="total-confirmed"></h5>
+                    </td>
+                    <td>
+                        <h5 id="total-recovered"></h5>
+                    </td>
+                    <td>
+                        <h5 id="total-deaths"></h5>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-md-12 text-center">
+            <a href="covid-19.html"><button type="button" class="btn btn-light text-center"
+                    id="refresh-btn">Refresh</button></a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script/covid.js"></script>
+</body>
+
+</html>

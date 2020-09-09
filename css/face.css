@@ -1,0 +1,27 @@
+canvas {
+  border: 3px solid black;
+}
+.invisible {
+  display: none;
+}
+.text-center {
+  text-align: center;
+}
+div {
+  margin: 10px;
+}
+.center-block {
+  display: block;
+  margin: auto;
+}
+label {
+  padding-right: 10px;
+  width: 25%;
+  vertical-align: top;
+  font: 16px 'Lucida Grande', sans-serif;
+}
+
+h1{
+  text-align: center;
+  padding-top: 20px;
+}

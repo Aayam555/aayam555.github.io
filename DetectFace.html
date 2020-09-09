@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Face Detection</title>
+  <link rel="icon" href="Images/favicon.jpg" type="image/jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/face.css">
+</head>
+<style>
+  #logo {
+    font-family: 'Lobster', cursive;
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
+    <a class="navbar-brand" href="index.html">
+      <h3 id="logo">Aayam555</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="element.html">Elements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="App.html">Apps</a>
+        </li>
+      </ul>
+      <a href="https://www.youtube.com/channel/UCxOSFCyWvZ69g0EWKkizy2g?view_as=subscriber" class="btn btn-light"
+        role="button" aria-pressed="true" type="summit" target="_blank">SUBSCRIBE</a>
+    </div>
+  </nav>
+  <h1>Face Detection</h1>
+  <hr>
+  <div id="container">
+    <canvas class="center-block" id="canvasOutput" width=10 height=10></canvas>
+  </div>
+  <div class="invisible">
+    <input type="" id="eye" name="" value="">
+  </div>
+  <div class="invisible">
+    <video id="video" class="hidden">Your browser does not support the video.</video>
+  </div>
+
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</html>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+<script>
+  var Module = {
+    wasmBinaryFile: 'https://huningxin.github.io/opencv.js/build/wasm/opencv_js.wasm',
+    preRun: [function () {
+      Module.FS_createPreloadedFile('/', 'haarcascade_eye.xml', 'https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_eye.xml', true, false);
+      Module.FS_createPreloadedFile('/', 'haarcascade_frontalface_default.xml', 'https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml', true, false);
+    }],
+    _main: function () { opencvIsReady(); }
+  };
+</script>
+<script async src="https://huningxin.github.io/opencv.js/build/wasm/opencv.js"></script>
+<script src="script/face.js"></script>
